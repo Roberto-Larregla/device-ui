@@ -601,11 +601,6 @@ void TFieldView::connectHooks(void)
                       pkc, buf, sizeof(buf));
     };
 
-    app->on_alert = [](Alert kind, const std::string &what) {
-        // sound is played by the firmware's notification module (Meshtastic's ringtone setting)
-        ILOG_DEBUG("T-Field alert %d: %s", (int)kind, what.c_str());
-    };
-
     // SD card files (tracks, waypoints)
     app->on_read_file = [this](const std::string &path, std::string &content) {
         if (!sdReady())
@@ -1116,7 +1111,7 @@ void TFieldView::newMessage(uint32_t from, uint32_t to, uint8_t ch, const char *
     m.time = localHHMM(m.epoch);
     if (m.mine)
         m.status = "Enviado";
-    app->add_message(chatFor(from, to, ch), m, !restore);
+    app->add_message(chatFor(from, to, ch), m);
 }
 
 void TFieldView::restoreMessage(const LogMessage &msg)
@@ -1135,7 +1130,7 @@ void TFieldView::restoreMessage(const LogMessage &msg)
                    : msg.status == LogMessage::eFailed  ? "No enviado"
                    : msg.status == LogMessage::eNoResponse ? "Sin confirmar"
                                                           : "Enviado";
-    app->add_message(chatFor(msg.from, msg.to, msg.ch), m, false);
+    app->add_message(chatFor(msg.from, msg.to, msg.ch), m);
 }
 
 void TFieldView::textMessageStatus(uint32_t requestId, LogMessage::MsgStatus status)

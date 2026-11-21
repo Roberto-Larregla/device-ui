@@ -25,7 +25,7 @@
     "libdeflate": "https://github.com/mverch67/libdeflate/archive/7291dd18ed11df673cce8e33b7f432a1273f1945.zip",
     "nanopb/Nanopb": "https://github.com/nanopb/nanopb/archive/refs/tags/nanopb-0.4.9.1.zip",
     "bitbank2/PNGdec": "https://github.com/mverch67/PNGdec/archive/d88b6fe2ec8d49c2b097a529b34d1d615ca5cf1b.zip",
-    "t-field-ui": "https://github.com/Roberto-Larregla/t-field-ui/archive/64536b19aa694783168c8aa3244bc0a67349aa1a.zip"
+    "t-field-ui": "https://github.com/Roberto-Larregla/t-field-ui/archive/b9a5c7d7e88a31b30ee11436d41aaf1974ddd4e0.zip"
   },
   "build": {
     "libArchive": true,

@@ -7,7 +7,7 @@ else()
     FetchContent_Declare(
         TFieldUI
         GIT_REPOSITORY "https://github.com/Roberto-Larregla/t-field-ui"
-        GIT_TAG  64536b19aa694783168c8aa3244bc0a67349aa1a # same as library.json
+        GIT_TAG  b9a5c7d7e88a31b30ee11436d41aaf1974ddd4e0 # same as library.json
         SOURCE_SUBDIR none # only the sources; its own CMake project is the simulator
     )
     FetchContent_MakeAvailable(TFieldUI)
