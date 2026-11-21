@@ -1,3 +1,5 @@
+> **This fork shows [T-Field UI](https://github.com/Roberto-Larregla/t-field-ui)** on 320×240 devices such as the LILYGO T-Deck Plus, in place of the stock 320×240 view. The adapter is `source/graphics/TFT/TFieldView.cpp`; installation steps are in the T-Field UI README.
+
 #
 
 <div align="center">
